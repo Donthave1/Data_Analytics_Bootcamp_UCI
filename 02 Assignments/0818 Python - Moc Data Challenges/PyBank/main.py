@@ -2,7 +2,7 @@
 import os, csv
 
 #define resources path
-csv_path = os.path.join("..", "..", "..", "Resources", "budget_data.csv")
+csv_path = os.path.join("..", "Resources", "budget_data.csv")
 
 #define variables
 total_months = 0
@@ -59,7 +59,8 @@ print(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_incr
 print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease_revenue})")
 
 #export a text.file
-with open("Business_Data_Analysis.txt", "w") as text_file:
+output_path = "../Output/Business_Data_Analysis.txt"
+with open(output_path, "w") as text_file:
     text_file.write("Financial Analysis")
     text_file.write("\n")
     text_file.write("-------------------")
