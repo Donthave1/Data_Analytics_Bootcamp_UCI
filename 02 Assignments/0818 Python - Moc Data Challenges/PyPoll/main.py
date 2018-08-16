@@ -30,14 +30,19 @@ with open(csv_path, newline="", encoding="UTF-8") as csv_file:
         else:
             #existing candidate vote addition
             candidate_vote[row["Candidate"]] += 1
-        #find candidate average
-        #candidate_avg[candidate_vote["Candidate"]] = round(candidate_vote["Candidate"] / total_votes * 100, 2)
-for candidate_name,vote_count in candidate_vote.items():
-    print(candidate_name + " " + str(vote_count) + " " + str(round(vote_count / total_votes * 100, 2)) + "%")
 
 #sort the candidate vote list
 sorted_candidates = [k for k in sorted(candidate_vote, key=candidate_vote.get, reverse=True)]
-print(sorted_candidates)
 #find the winner
 winner = sorted_candidates[0]
-print(winner)
+
+#result output in console
+print("\nElection Results")
+print("-------------------------")
+print(f"Total Votes: {total_votes}")
+print("-------------------------")
+for candidate_name,vote_count in candidate_vote.items():
+    print(candidate_name + " " + str(round(vote_count / total_votes * 100, 2)) + "% (" + str(vote_count) + ")")
+print("-------------------------")
+print("Winner: " + winner)
+print("-------------------------")
