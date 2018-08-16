@@ -42,7 +42,26 @@ print("-------------------------")
 print(f"Total Votes: {total_votes}")
 print("-------------------------")
 for candidate_name,vote_count in candidate_vote.items():
-    print(candidate_name + " " + str(round(vote_count / total_votes * 100, 2)) + "% (" + str(vote_count) + ")")
+    print(candidate_name + ": " + str(round(vote_count / total_votes * 100, 4)) + "% (" + str(vote_count) + ")")
 print("-------------------------")
 print("Winner: " + winner)
 print("-------------------------")
+
+#define output path
+output_path = "../Output/Election_Result.txt"
+with open(output_path, "w") as text_file:
+    text_file.write("Election Results")
+    text_file.write("\n")
+    text_file.write("-------------------")
+    text_file.write("\n")
+    #text_file.write(candidate_name + ": " + str(round(vote_count / total_votes * 100, 4)) + "% (" + str(vote_count) + ")"))
+    text_file.write("\n")
+    text_file.write("-------------------------")
+    text_file.write("\n")
+    text_file.write("-------------------------")
+    text_file.write("\n")
+    text_file.write("Winner: " + winner) 
+    text_file.write("\n")
+    text_file.write("-------------------------")
+
+
