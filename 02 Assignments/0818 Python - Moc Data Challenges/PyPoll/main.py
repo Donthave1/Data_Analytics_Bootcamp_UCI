@@ -6,10 +6,8 @@ csv_path = os.path.join("..", "Resources", "election_data.csv")
 
 #define variables
 total_votes = 0
-total_candidate = 0
 candidate_list = []
 candidate_vote = {}
-candidate_avg = {}
 
 #make csv file an iteratable object, including dictionary type of reader
 with open(csv_path, newline="", encoding="UTF-8") as csv_file:
@@ -18,8 +16,6 @@ with open(csv_path, newline="", encoding="UTF-8") as csv_file:
     for row in csv_reader:
         #find total vote
         total_votes += 1
-        #find total candidate
-        total_candidate = row["Candidate"]
         #create candidate list; if candidate exist + 1 vote, 
         #if candidate do not exist, append to the list
         if row["Candidate"] not in candidate_list:
