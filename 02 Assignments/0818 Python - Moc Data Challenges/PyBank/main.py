@@ -58,20 +58,13 @@ print(f"Average Change: ${revenue_average}")
 print(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase_revenue})")
 print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease_revenue})")
 
-#export a text.file
-output_path = "../Output/Business_Data_Analysis.txt"
-with open(output_path, "w") as text_file:
-    text_file.write("Financial Analysis")
-    text_file.write("\n")
-    text_file.write("-------------------")
-    text_file.write("\n")
-    text_file.write(f"Total Months: {total_months}")
-    text_file.write("\n")
-    text_file.write(f"Total: ${total_revenue}")
-    text_file.write("\n")
-    text_file.write(f"Average Change: ${revenue_average}")
-    text_file.write("\n")
-    text_file.write(f"Greatest Increase: {greatest_increase_month} (${greatest_increase_revenue})") 
-    text_file.write("\n")
-    text_file.write(f"Greatest Increase: {greatest_decrease_month} (${greatest_decrease_revenue})")
-
+#export a csv.file
+output_path = "../Output/Business_Data_Analysis.csv"
+with open(output_path, "w") as csv_file:
+    print("\nFinancial Analysis", file = csv_file) 
+    print("-------------------", file = csv_file)
+    print(f"Total Months: {total_months}", file = csv_file)
+    print(f"Total: ${total_revenue}", file = csv_file)
+    print(f"Average Change: ${revenue_average}", file = csv_file)
+    print(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase_revenue})", file = csv_file)
+    print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease_revenue})", file = csv_file)

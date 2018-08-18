@@ -43,7 +43,7 @@ print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
 
-#export to text file
+#export to csv file
 output_path = "../Output/Election_Result.csv"
 with open(output_path, "w") as csv_file:
     print("Election Results", file = csv_file)
