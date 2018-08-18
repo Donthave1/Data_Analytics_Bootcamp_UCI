@@ -44,16 +44,16 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 #export to text file
-output_path = "../Output/Election_Result.txt"
-with open(output_path, "w") as text_file:
-    print("Election Results", file = text_file)
-    print("-------------------------", file = text_file)
-    print(f"Total Votes: {total_votes}", file = text_file)
-    print("-------------------------", file = text_file)
+output_path = "../Output/Election_Result.csv"
+with open(output_path, "w") as csv_file:
+    print("Election Results", file = csv_file)
+    print("-------------------------", file = csv_file)
+    print(f"Total Votes: {total_votes}", file = csv_file)
+    print("-------------------------", file = csv_file)
     for candidate_name,vote_count in candidate_vote.items():
-        print(candidate_name + ": " + str(round(vote_count / total_votes * 100, 4)) + "% (" + str(vote_count) + ")", file = text_file)
-    print("-------------------------", file = text_file)
-    print(f"Winner: {winner}", file = text_file)
-    print("-------------------------", file = text_file)
+        print(candidate_name + ": " + str(round(vote_count / total_votes * 100, 4)) + "% (" + str(vote_count) + ")", file = csv_file)
+    print("-------------------------", file = csv_file)
+    print(f"Winner: {winner}", file = csv_file)
+    print("-------------------------", file = csv_file)
 
 
