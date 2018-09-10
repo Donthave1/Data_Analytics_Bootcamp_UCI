@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+# Data Analytics Bootcamp
 
-You can use the [editor on GitHub](https://github.com/Donthave1/UCI_Data_Bootcamp/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to my repository for **Data Analytics Bootcamp class of 2018** at **University of California Irvine**. This is a 24 weeks of courses, where we participate in variety of individual and team exercises, working independently and in groups, both in the classroom and at home. The goal is to gain a comprehensive learning experience and true insight into a “day in the life” of a data professional.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This repository will contain all of the assignment, groupe projects, final project and any related resources.  
+Please see below for the links to my assignment completion:  
 
-### Markdown
+## Quick Access to Assignments & Group Porjects:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Week [01 Kickstarter Project Trend Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/Kickstarter%20Project%20Trend%20Analysis "Assignment 1")
 
-```markdown
-Syntax highlighted code block
+Week [02 Stock Data Analysis Comparison](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/Stock%20Data%20Analysis%20Comparison "Assignment 2")
 
-# Header 1
-## Header 2
-### Header 3
+Week [03 Python - Moc Data Challenges](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/Python%20-%20Moc%20Data%20Challenges "Assignment 3")
 
-- Bulleted
-- List
+Week [04 Pyndas - Games Sales : School Rating Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/Pyndas%20-%20Games%20Sales%20:%20School%20Rating%20Analysis "Assignment 4")
 
-1. Numbered
-2. List
+Week [05 Matplotlib - Data Visualization](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/Matplotlib%20-%20Data%20Visualization "Assignment 5")
 
-**Bold** and _Italic_ and `Code` text
+Week [06 WeatherPy API Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/02%20Assignments/WeatherPy%20API%20Analysis "Assignment 6")
 
-[Link](url) and ![Image](src)
-```
+Week [07 Boston Marathon Performance Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/03%20Team%20Projects/Boston%20Maraton "Group Project 1")
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Donthave1/UCI_Data_Bootcamp/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
