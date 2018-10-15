@@ -38,8 +38,8 @@ def welcome():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/<start><br>"
-		f"/api/v1.0<start>/<end><br>"
+        f"/api/v1.0/'start date'<br>"
+		f"/api/v1.0/roundtrip/'start date'/'end date'"
     )
 
 # for Precipitation page
@@ -95,7 +95,7 @@ def tobs():
 
 # for Start date page
 @app.route("/api/v1.0/<start_date>")
-def query_dates(start_date):
+def findstart(start_date):
     #Return the avg, max, min, temp over a specific time period
     results = session.query(func.avg(Measurement.tobs), func.max(Measurement.tobs), func.min(Measurement.tobs)).\
         filter(Measurement.date >= start_date).all()
@@ -112,8 +112,8 @@ def query_dates(start_date):
 
 
 # for Start & End date page
-@app.route("/api/v1.0/<start_date>/<end_date>")
-def query_datese(start_date, end_date):
+@app.route("/api/v1.0/roundtrip/<start_date>/<end_date>")
+def roundtrip(start_date, end_date):
     #Return the avg, max, min, temp over a specific time period
     results = session.query(func.avg(Measurement.tobs), func.max(Measurement.tobs), func.min(Measurement.tobs)).\
         filter(Measurement.date >= start_date, Measurement.date <= end_date).all()
