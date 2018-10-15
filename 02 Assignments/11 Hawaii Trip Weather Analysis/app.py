@@ -100,15 +100,23 @@ def findstart(start_date):
     results = session.query(func.avg(Measurement.tobs), func.max(Measurement.tobs), func.min(Measurement.tobs)).\
         filter(Measurement.date >= start_date).all()
 
-    data_list = []
-    for result in results:
-        row = {}
-        row["Start Date"] = start_date
-        row["Average Temperature"] = float(result[0])
-        row["Highest Temperature"] = float(result[1])
-        row["Lowest Temperature"] = float(result[2])
-        data_list.append(row)
-    return jsonify(data_list)
+    # 404 error build
+    earliest_date = session.query(Measurement.date).order_by(Measurement.date).first()
+    latest_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
+    earliest_date = "".join([x for x in earliest_date])
+    latest_date = "".join([x for x in latest_date])
+
+    if earliest_date < start_date and start_date < latest_date:
+        data_list = []
+        for result in results:
+            row = {}
+            row["Start Date"] = start_date
+            row["Average Temperature"] = float(result[0])
+            row["Highest Temperature"] = float(result[1])
+            row["Lowest Temperature"] = float(result[2])
+            data_list.append(row)
+        return jsonify(data_list)
+    return jsonify({"error": "Date not found, please use '%Y-%M-%D' formate or choose a date within range"}), 404    
 
 
 # for Start & End date page
@@ -118,25 +126,25 @@ def roundtrip(start_date, end_date):
     results = session.query(func.avg(Measurement.tobs), func.max(Measurement.tobs), func.min(Measurement.tobs)).\
         filter(Measurement.date >= start_date, Measurement.date <= end_date).all()
 
-    data_list = []
-    for result in results:
-        row = {}
-        row["Start Date"] = start_date
-        row["End Date"] = end_date
-        row["Average Temperature"] = float(result[0])
-        row["Highest Temperature"] = float(result[1])
-        row["Lowest Temperature"] = float(result[2])
-        data_list.append(row)
-    return jsonify(data_list)
+# 404 error build
+    earliest_date = session.query(Measurement.date).order_by(Measurement.date).first()
+    latest_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
+    earliest_date = "".join([x for x in earliest_date])
+    latest_date = "".join([x for x in latest_date])
 
-    # canonicalized = real_name.replace(" ", "").lower()
-    # for character in justice_league_members:
-    #     search_term = character["real_name"].replace(" ", "").lower()
+    if earliest_date < start_date and start_date < latest_date and earliest_date < end_date and end_date < latest_date:
+        data_list = []
+        for result in results:
+            row = {}
+            row["Start Date"] = start_date
+            row["End Date"] = end_date
+            row["Average Temperature"] = float(result[0])
+            row["Highest Temperature"] = float(result[1])
+            row["Lowest Temperature"] = float(result[2])
+            data_list.append(row)
+        return jsonify(data_list)
+    return jsonify({"error": "Date not found, please use '%Y-%M-%D' formate or choose a date within range"}), 404
 
-    #     if search_term == canonicalized:
-    #         return jsonify(character)
-
-    # return jsonify({"error": f"Date not found, please use '%Y-%M-%D' formate."}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
