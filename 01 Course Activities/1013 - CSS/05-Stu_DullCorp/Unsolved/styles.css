@@ -1,0 +1,31 @@
+h1 {
+    color: red; 
+    background: gray; 
+    text-align: center;
+}
+
+h2 {
+    color: deeppink;
+}
+
+h3 {
+    color: orange;
+}
+
+img {
+    box-shadow: 10px 10px 5px black;
+}
+
+p {
+    font-size: 15px;
+    color: gray;
+}
+
+ul {
+    border-style: solid;
+    color: gray;
+}
+
+section {
+    background-color: black;
+}
