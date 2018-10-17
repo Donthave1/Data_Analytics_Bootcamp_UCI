@@ -7,7 +7,7 @@ from sqlalchemy import create_engine, func, inspect
 import numpy as np
 import pandas as pd
 
-engine = create_engine("sqlite:///Resources/hawaii.sqlite")
+engine = create_engine("sqlite:///Resources/hawaii.sqlite", connect_args={'check_same_thread': False})
 # reflect an existing database into a new model
 Base = automap_base()
 
