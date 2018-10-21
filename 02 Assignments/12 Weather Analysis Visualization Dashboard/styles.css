@@ -1,0 +1,44 @@
+.background1 {
+    background-color: #ebebeb;
+}
+
+.navmain {
+    background-color: #19a48f;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 250%;
+    padding: 10px;
+    margin-bottom: -9px;
+    margin-top: -9px;
+}
+
+.fig1 {
+    float: left;
+    max-width: 25%;
+}
+
+.fig1-text {
+    float: left;
+}
+
+.figs {
+    float: left;
+    height: 150px;
+    width: 50%;
+}
+
+.jumbo-left {
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+.jumbo-right {
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+/* @media (max-width:480px) {
+    .jumbo-right {
+
+    }
+} */
