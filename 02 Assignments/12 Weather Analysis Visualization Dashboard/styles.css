@@ -2,29 +2,21 @@
     background-color: #ebebeb;
 }
 
+.navbg {
+    background-color: #ffffff;
+}
+
 .navmain {
-    background-color: #19a48f;
+    background-color: #7851a9;
     font-family: Calibri;
     font-weight: bold;
     font-size: 250%;
     padding: 10px;
-    margin-bottom: -9px;
-    margin-top: -9px;
-}
-
-.fig1 {
-    float: left;
-    max-width: 25%;
-}
-
-.fig1-text {
-    float: left;
 }
 
 .figs {
+    cursor:pointer;
     float: left;
-    height: 150px;
-    width: 50%;
 }
 
 .jumbo-left {
@@ -37,8 +29,24 @@
     background-color: #ffffff;
 }
 
-/* @media (max-width:480px) {
-    .jumbo-right {
+.selected {
+    border-color: #1ddd33;
+    border-style: solid
+}
 
+.panelwrap {
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 480px){
+    .navbg {
+        background-color: #7851a9;
     }
-} */
+    .navmain {
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: 250%;
+        padding: 10px;
+    }
+}
