@@ -1,4 +1,10 @@
-# News Mood
+# Tweeter Live Time Analysis
+
+## Objective
 
 
-# PlotBot
+## Approach
+Tools:
+
+* Python - Matplotlib, Pandas, Numpy, Request, Time, 
+
