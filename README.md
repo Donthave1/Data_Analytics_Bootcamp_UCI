@@ -21,9 +21,9 @@ Please see below for the links to my assignment completion:
 
 [07. Tweeter Live Time Analysis](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/07%20Tweeter%20Live%20Time%20Analysis "Assignment 7")
 
-[08. MySQL DataBase](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/8%20MySQL%20DataBase "Assignment 8")
+[08. MySQL DataBase](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/08%20MySQL%20DataBase "Assignment 8")
 
-[09. Hawaii Trip Weather Analysis](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/9%20Hawaii%20Trip%20Weather%20Analysis "Assignment 9")
+[09. Hawaii Trip Weather Analysis](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/09%20Hawaii%20Trip%20Weather%20Analysis "Assignment 9")
 
 [10. 10 Weather Analysis Visualization Dashboard](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/10%20Weather%20Analysis%20Visualization%20Dashboard "Assignment 10")
 
