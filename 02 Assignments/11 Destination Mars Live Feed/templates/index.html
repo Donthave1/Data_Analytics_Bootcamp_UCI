@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Mars News</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Here is latest Mars News</h1>
+            <p><a class="btn btn-primary btn-lg" href="/news" role="button">Find out what is going down on Mars!</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>On {{ scraped_date }}</h4>
+                <h1 class="heading">Latest Topic on Mars: {{mars_news.title}}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Here is some Mars Images</h1>
+            <p><a class="btn btn-primary btn-lg" href="/images" role="button">Some Nonsense Mars Pictures</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>On {{ scraped_date }}</h4>
+                <h1>{{ mars_pics.src }}</h1>
+                <!-- <img src="{{mars_pics.src}}" width: 50% /> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
