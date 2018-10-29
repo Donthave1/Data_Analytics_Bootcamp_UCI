@@ -46,9 +46,10 @@ def scrape():
     facts_html = browser.html
     table_df = pd.read_html(facts_html)[0]
     facts_df = table_df.rename(columns = {
-        0:"Facts",
-        1:"Values"
+        0:"Description",
+        1:"Value"
     })
+    facts_df.set_index("Description", inplace=True)
     # Parse html table
     data["facts"] = facts_df.to_html()
 
