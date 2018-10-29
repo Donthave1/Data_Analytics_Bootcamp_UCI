@@ -32,17 +32,49 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h1 class="heading">Latest Mars Tweets: </h1>
+                <h1 class="heading">Latest Mars' Tweets: </h1>
                 <h3>{{ mars.tweet }}</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <h1 class="heading"> Cerb Weather: </h1>
+                <h1 class="heading">Mars' Facts</h1>
+                <div>
+                    {{ mars.facts|safe }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading">{{ mars.cerb_title }}</h1>
                 <h4>Click the images for full size view</h4>
-                <h2>{{ mars.cerb_title }}</h2>
                 <a href={{ mars.cerb }}><img src={{ mars.cerb }} alt="Cerb Images"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading"> {{ mars.schi_title }} </h1>
+                <h4>Click the images for full size view</h4>
+                <a href={{ mars.schi }}><img src={{ mars.schi }} alt="Schi Images"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading">{{ mars.syrt_title }}</h1>
+                <h4>Click the images for full size view</h4>
+                <a href={{ mars.syrt }}><img src={{ mars.syrt }} alt="Syrt Images"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading">{{ mars.vall_title }}</h1>
+                <h4>Click the images for full size view</h4>
+                <a href={{ mars.vall }}><img src={{ mars.vall }} alt="Vall Images"></a>
             </div>
         </div>
 
