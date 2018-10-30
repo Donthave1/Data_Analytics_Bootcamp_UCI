@@ -1,4 +1,9 @@
 .bg {
-    background-image: url("987088524-SpaceX-AI-Rocket-Launch.jpg");
+    color: #ffffff;
+    background-image: url('/static/p1.jpg');
     background-size: cover;
+}
+
+#content {
+    display:none;
 }
