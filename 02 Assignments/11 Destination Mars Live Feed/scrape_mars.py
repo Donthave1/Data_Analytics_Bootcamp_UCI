@@ -4,6 +4,10 @@ import datetime as dt
 import pandas as pd
 
 
+# Function to find today's date
+def today():
+    return dt.date.today()
+    
 def init_browser():
 # @NOTE: Replace the path with your actual path to the chromedriver
     executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
@@ -53,50 +57,32 @@ def scrape():
     # Parse html table
     data["facts"] = facts_df.to_html()
 
-    # Scraping Cerberus Hemisphere Image
-    weather_url1 = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-    browser.visit(weather_url1)
-    browser.click_link_by_partial_text("Cerberus Hemisphere Enhanced")
-    cerb_html = browser.html
-    cerb_soup = bs(cerb_html, "lxml")
-    download_cerb = cerb_soup.find("div", class_="downloads")
-    data["cerb"] = download_cerb.find("a")["href"]
-    data["cerb_title"] = cerb_soup.find("h2", class_="title").get_text()
-
-    # Scraping Schiaparelli Hemisphere Image
-    weather_url2 = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-    browser.visit(weather_url2)
-    browser.click_link_by_partial_text("Schiaparelli Hemisphere Enhanced")
-    schi_html = browser.html
-    schi_soup = bs(schi_html, "lxml")
-    download_schi = schi_soup.find("div", class_="downloads")
-    data["schi"] = download_schi.find("a")["href"]
-    data["schi_title"] = schi_soup.find("h2", class_="title").get_text()
-
-    # Scraping Syrtis Major Hemisphere Image
-    weather_url3 = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-    browser.visit(weather_url3)
-    browser.click_link_by_partial_text("Syrtis Major Hemisphere Enhanced")
-    syrt_html = browser.html
-    syrt_soup = bs(syrt_html, "lxml")
-    download_syrt = syrt_soup.find("div", class_="downloads")
-    data["syrt"] = download_syrt.find("a")["href"]
-    data["syrt_title"] = syrt_soup.find("h2", class_="title").get_text()
-
-    # Scraping Valles Marineris Hemisphere Image
-    weather_url4 = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-    browser.visit(weather_url4)
-    browser.click_link_by_partial_text("Valles Marineris Hemisphere Enhanced")
-    vall_html = browser.html
-    vall_soup = bs(vall_html, "lxml")
-    download_vall = vall_soup.find("div", class_="downloads")
-    data["vall"] = download_vall.find("a")["href"]
-    data["vall_title"] = vall_soup.find("h2", class_="title").get_text()
-
+    # Scraping Hemisphere
+    base_url = "https://astrogeology.usgs.gov"
+    full_url = f"{base_url}/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    browser.visit(full_url)
+    home_html = browser.html
+    home_soup = bs(home_html, "lxml")
+    all_tags = home_soup.find_all("div", class_="item")
+    hemisphere_image_urls = []
+    # scraped all page links
+    for tag in all_tags:
+        item_link = tag.find("a", "itemLink")
+        item_href = item_link["href"]
+        
+        # applied scraped links and soup to visit the page to grab titles and images
+        browser.visit(f"{base_url}{item_href}")
+        hemi_html = browser.html
+        hemi_soup = bs(hemi_html, "lxml")
+        img_title = hemi_soup.find("h2", class_="title").get_text()
+        img_download = hemi_soup.find("div", class_="downloads")
+        img_url = img_download.find("a")["href"]
+        
+        hemisphere_image_urls.append({
+                    "title": img_title,
+                    "img_url": img_url
+                })
+    data["hemispheres"] = hemisphere_image_urls
 
     return data
 
-
-# Function to find today's date
-def today():
-    return dt.date.today()

@@ -42,37 +42,24 @@
                     {{ mars.facts|safe }}
                 </div>
             </div>
-     
+        </div>
+        <br>
+        <div class="row">
             <div class="col-md-12">
                 <div class="panel text-center">
-                    <h1 class="text-center">Mars Hemispheres</h1>
+                    <h1>Mars Hemispheres</h1>
                     <hr class="my-4">
-                    <div class="card col-md-6" style="float: left; background: none;">
-                        <a href={{ mars.cerb }}><img src={{ mars.cerb }} width="400" height="400" alt="Cerb Images"></a>
-                        <h4 class="heading">{{ mars.cerb_title }}</h4>
-                        <p>Click the images for full size view</p>
-                    </div>
-                    <div class="card col-md-6" style="float: left; background: none;">
-                        <a href={{ mars.schi }}><img src={{ mars.schi }} width="400" height="400" alt="Cerb Images"></a>
-                        <h4 class="heading">{{ mars.schi_title }}</h4>
-                        <p>Click the images for full size view</p>
-                    </div>
-                    <div class="card col-md-6" style="float: left; background: none;">
-                        <a href={{ mars.syrt }}><img src={{ mars.syrt }} width="400" height="400" alt="Cerb Images"></a>
-                        <div class="card-body">
-                            <h4 class="heading">{{ mars.syrt_title }}</h4>
-                            <p>Click the images for full size view</p>
-                        </div>
-                    </div>
-                    <div class="card col-md-6" style="float: left; background: none;">
-                        <a href={{ mars.vall }}><img src={{ mars.vall }} width="400" height="400" alt="Cerb Images"></a>
-                        <div class="card-body">
-                            <h4 class="heading">{{ mars.vall_title }}</h4>
-                            <p>Click the images for full size view</p>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            {% for image in mars.hemispheres %}
+            <div class="card col-md-6" style="float: left; background: none;">
+                <a href="{{ image['img_url'] }}"><img src="{{ image['img_url'] }}" width="400" height="400" alt="{{ image['title'] }}"></a>
+                <h4 class="heading">{{ image["title"] }}</h4>
+                <p>Click the images for full size view</p>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </body>
