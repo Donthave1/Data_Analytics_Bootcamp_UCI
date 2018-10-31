@@ -21,7 +21,7 @@ Source websites:
 
 Second, once the scraping codes worked with the the result I want. I convert it to pthon file to create function to be able to tie it with MongoDB using PyMongo library and Flask. This part of code can be found in [app.py](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/blob/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/app.py) & [scrape_mars.py](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/blob/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/scrape_mars.py).  
 
-Finally, to display visualization I combined all together by using [HTML with bootstrap](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/blob/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/templates/index.html). Please see below for end result.
+Finally, to display visualization I created a [landing page](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/blob/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/templates/index.html) and which lead to a [result page](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/blob/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/templates/result.html). Please see below for end result.
 
-![alt text]( "final 1")
-![alt text]( "final 2")
+![alt text](https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/Archive/Screen%20Shot%202018-10-30%20at%207.06.01%20AM.png "final 1")
+![alt text](https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed/Archive/Screen%20Shot%202018-10-30%20at%207.06.21%20AM.png "final 2")
