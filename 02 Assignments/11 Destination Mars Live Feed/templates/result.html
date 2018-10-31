@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Mars</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+<body id="bg">
+    <div class="container">
+        <div class="jumbotron text-center" style="background: none;">
+            <h1 class="heading">Mars News</h1>
+            <p><a class="btn btn btn-danger btn-lg" href="/scrape" role="button" aria-pressed="true">LANDED!!!</a></p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>On {{ scraped_date }}</h4>
+                <h3><strong>Latest Mars News: </strong></h3>
+                <h5><strong>{{ mars.title }}</strong></h5>
+                <p style="box-shadow: 10px 10px 5px gray;">{{ mars.content }}</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <h3><strong>Featured Mars Image</strong></h3>
+                <p>Click the images for full size view</p>
+                <a href={{ mars.pics }}><img src={{ mars.thumbnail }} style="box-shadow: 10px 10px 5px gray;" alt="NASA Images"></a>
+            </div>
+
+            <div class="col-md-4">
+                <h3><strong>Current Weather on Mars: </strong></h3>
+                <p style="box-shadow: 10px 10px 5px gray;">{{ mars.tweet }}</p>
+                <h3><strong>Mars' Facts</strong></h3>
+                <div style="box-shadow: 10px 10px 5px gray;">
+                    {{ mars.facts|safe }}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel text-center">
+                    <h1>Mars Hemispheres</h1>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for image in mars.hemispheres %}
+            <div class="card col-md-6" style="float: left; background: none;">
+                <a href="{{ image['img_url'] }}"><img src="{{ image['img_url'] }}" width="400" height="400" alt="{{ image['title'] }}"></a>
+                <h4 class="heading">{{ image["title"] }}</h4>
+                <p>Click the images for full size view</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

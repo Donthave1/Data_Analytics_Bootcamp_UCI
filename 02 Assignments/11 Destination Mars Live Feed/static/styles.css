@@ -1,6 +1,12 @@
-.bg {
+#bg {
     color: #ffffff;
     background-image: url('/static/p1.jpg');
+    background-size: cover;
+}
+
+#land {
+    color: #ffffff;
+    background-image: url('/static/987088524-SpaceX-AI-Rocket-Launch.jpg');
     background-size: cover;
 }
 

@@ -11,6 +11,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 @app.route("/")
 def index():
     mars = mongo.db.mars.find_one()
+    print("Launch in 3..2..1...!!")
     return render_template("index.html", mars=mars, scraped_date=scraped_date)
 
 # Scrape for News
@@ -19,7 +20,13 @@ def scraper():
     mars = mongo.db.mars
     mars_data = scrape_mars.scrape()
     mars.update({}, mars_data, upsert=True)
-    return redirect("/", code=302)
+    return redirect("/landed", code=302)
+
+# Final result
+@app.route("/landed")
+def result():
+    mars = mongo.db.mars.find_one()
+    return render_template("result.html", mars=mars, scraped_date=scraped_date)
 
 if __name__ == "__main__":
     app.run(debug=True)
