@@ -10,6 +10,9 @@ let inputField = d3.select("#datetime");
 button.on("click", function() {
     //prevent page from refreshing
     d3.event.preventDefault();
+    // Set New Table
+    let newTable = d3.select("tbody");
+    newTable.selectAll("td").remove()
 
     // User Input
     let userInput = inputField.property("value");
@@ -39,7 +42,6 @@ button.on("click", function() {
         });
     }
 });
-
 
 
 // // Setting up all variable array
