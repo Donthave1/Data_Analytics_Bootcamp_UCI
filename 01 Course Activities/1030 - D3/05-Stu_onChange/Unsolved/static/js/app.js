@@ -1,5 +1,6 @@
 // grab references to the input element and the output div
-// @TODO: YOUR CODE HERE
+var text = d3.select("#text");
+var output = d3.select(".output");
 
 // Function to reverse a string
 function reverseString(str) {
