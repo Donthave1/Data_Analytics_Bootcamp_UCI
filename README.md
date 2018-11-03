@@ -29,6 +29,8 @@ Please see below for the links to my assignment completion:
 
 [11. Desitination: Mars Live Feed](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/11%20Destination%20Mars%20Live%20Feed "Assignment 11")
 
+[12. UFO Sighting Record Library](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/12%20UFO%20Sighting "Assignment 12")
+
 
 
 ## Group Projects:
