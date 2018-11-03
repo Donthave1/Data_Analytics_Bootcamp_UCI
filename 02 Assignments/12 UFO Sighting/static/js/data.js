@@ -5,7 +5,7 @@ let noData = {
   country: "N/A",
   shape: "N/A",
   durationMinutes: "N/A",
-  comments: "No Event in given date."
+  comments: "NO EVENT IN GIVEN DATE."
 }
 
 var data = [{
