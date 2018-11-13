@@ -32,7 +32,6 @@ Samples_Metadata = Base.classes.sample_metadata
 Samples = Base.classes.samples
 
 
-
 @app.route("/")
 def index():
     """Return the homepage."""
@@ -97,6 +96,12 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+
+@app.route("/wfreq/<sample>")
+def wfreq(sample):
+    wfreq_query = db.session.query(Samples_Metadata.WFREQ).all()
+    return jsonify(wfreq_query[0][0])
+
 
 
 
