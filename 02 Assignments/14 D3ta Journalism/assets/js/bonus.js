@@ -330,14 +330,14 @@ function makeResponsive() {
             const value = d3.select(this).attr("value");
             if (value !== chosenYAxis) {
 
-            // replaces chosenXaxis with value
+            // replaces chosenYaxis with value
             chosenYAxis = value;
 
             // functions here found above csv import
-            // updates x scale for new data
+            // updates y scale for new data
             yLinearScale = yScale(newsData, chosenYAxis);
 
-            // updates x axis with transition
+            // updates y axis with transition
             yAxis = renderYAxes(yLinearScale, yAxis);
 
             // updates circles with new y values
