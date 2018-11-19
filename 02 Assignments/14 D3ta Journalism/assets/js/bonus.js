@@ -67,15 +67,15 @@ function renderYCircles(circlesGroup, newYScale, chosenYAxis) {
 // new x text position
 function renderXText(textGroup, xLinearScale, chosenXAxis) {
     textGroup.transition()
-    .duration(1000)
-    .attr("x", d => xLinearScale(d[chosenXAxis]));
+        .duration(1000)
+        .attr("x", d => xLinearScale(d[chosenXAxis]));
     return textGroup;
 };
 // new y text position
 function renderYText(textGroup, yLinearScale, chosenYAxis) {
     textGroup.transition()
-    .duration(1000)
-    .attr("y", d => yLinearScale(d[chosenYAxis]));
+        .duration(1000)
+        .attr("y", d => yLinearScale(d[chosenYAxis]));
     return textGroup;
 };
 
@@ -99,11 +99,11 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     };
 
     const toolTip = d3.tip()
-    .attr("class", "d3-tip")
-    .offset([80, -60])
-    .html(function(d) {
-        return (`${d.state}<br>${yLabel} ${d[chosenYAxis]}%<br>${xLabel} ${d[chosenXAxis]}`);
-        });
+        .attr("class", "d3-tip")
+        .offset([80, -60])
+        .html(function(d) {
+            return (`${d.state}<br>${yLabel} ${d[chosenYAxis]}%<br>${xLabel} ${d[chosenXAxis]}`);
+            });
 
     circlesGroup.call(toolTip);
 
@@ -111,9 +111,9 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     toolTip.show(data, this);
     })
     // onmouseout event
-    .on("mouseout", function(data, index) {
-        toolTip.hide(data);
-    });
+        .on("mouseout", function(data, index) {
+            toolTip.hide(data);
+        });
 
     return circlesGroup;
 };
@@ -130,7 +130,7 @@ function makeResponsive() {
   
     // clear svg is not empty
     if (!svgArea.empty()) {
-      svgArea.remove();
+        svgArea.remove();
     }
 
     // Create an SVG wrapper, append an SVG group that will hold our chart,
@@ -291,36 +291,36 @@ function makeResponsive() {
             // changes classes to change bold text
             if (chosenXAxis === "poverty") {
                 povertyLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 ageLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 incomeLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
             }
             else if (chosenXAxis === "age") {
                 povertyLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 ageLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 incomeLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
             }
             else {
                 povertyLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 ageLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 incomeLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 };
             };
         });
@@ -352,36 +352,36 @@ function makeResponsive() {
             // changes classes to change bold text
             if (chosenYAxis === "obesity") {
                 obesityLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 smokesLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 healthcareLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
             }
             else if (chosenYAxis === "smokes") {
                 obesityLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 smokesLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 healthcareLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
             }
             else {
                 obesityLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 smokesLabel
-                .classed("active", false)
-                .classed("inactive", true);
+                    .classed("active", false)
+                    .classed("inactive", true);
                 healthcareLabel
-                .classed("active", true)
-                .classed("inactive", false);
+                    .classed("active", true)
+                    .classed("inactive", false);
                 };
             };
         });
