@@ -92,7 +92,10 @@ function makeResponsive() {
       .attr("r", "10")
       .attr("fill", "gold")
       .attr("stroke-width", "1")
-      .attr("stroke", "black");
+      .attr("stroke", "black")
+      .attr("font-size", "12px")
+      .attr("text-anchor", "middle")
+      .attr("class", "stateText");
 
     // date formatter to display dates nicely
     const dateFormatter = d3.timeFormat("%d-%b");
