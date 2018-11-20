@@ -31,6 +31,9 @@ Please see below for the links to my assignment completion:
 
 [12. UFO Sighting Record Library](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/12%20UFO%20Sighting "Assignment 12")
 
+[13. Belly Button Biodiversity](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/13%20Belly%20Button%20Biodiversity "Assignment 13")
+
+[14. D3ta Journalism](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/14%20D3ta%20Journalism "Assignment 14")
 
 
 ## Group Projects:
