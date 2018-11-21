@@ -14,7 +14,7 @@ A given task to create data visualization for a major metro paper. With the char
 
 ![alt text](https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/14%20D3ta%20Journalism/assets/images/2-census.jpg "source page") We were given data from United States Census Bureau. First I have to get rid of unncessary value that was a typo in the csv file. 
 Then validate the excel format to make sure value that we are using is clean.  
-![alt text] (https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/14%20D3ta%20Journalism/assets/images/6-excel.jpg "excel snipt") 
+![alt text](https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/14%20D3ta%20Journalism/assets/images/6-excel.jpg "excel snipt") 
 
 
 I created a scatter plot between six data variables such as Healthcare vs. Poverty or Smokers vs. Age, etc.
