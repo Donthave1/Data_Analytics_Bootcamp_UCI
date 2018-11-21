@@ -158,22 +158,15 @@ function makeResponsive() {
             .attr("r", 10)
             .attr("class", "stateCircle");
 
-        // create state labels
+        // append state labels
         let textGroup = chartGroup.append("text")
-            .attr("class", "stateText")
             .selectAll("tspan")
             .data(newsData)
             .enter()
             .append("tspan")
-            .attr("x", function(d) {
-                return xLinearScale(d[chosenXAxis] - 0);
-            })
-            .attr("y", function(d) {
-                return yLinearScale(d.healthcare - 0.1);
-            })
-            .text(function(d) {
-                return d.abbr
-            });
+            .attr("x", d => xLinearScale(d[chosenXAxis]))
+            .attr("y", d => yLinearScale(d[chosenYAxis]))
+            .text(d => d.abbr);
         
         // Create group for  3 x- axis labels
         const xLabelsGroup = chartGroup.append("g")
