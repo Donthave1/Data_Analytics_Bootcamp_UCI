@@ -1,29 +1,35 @@
 // Store API 
 const baseUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
+// Create Features
+d3.json(baseUrl, function(data) {
+    createFeatures(data.features);
+});
 
+// Color selector
 function colorMag(mag) {
-    if (mag > 1) {
+    if (mag <= 0) {
+        color = "#38d807";
+    }
+    else if (mag <= 1) {
         color = "#c5e874";
     }
-    else if (mag > 2) {
+    else if (mag <= 2) {
         color = "#dcbb39";
     }
-    else if (mag > 3) {
-        color = "#e19f0f";
+    else if (mag <= 3) {
+        color = "#eba611";
     }
-    else if (mag > 4) {
-        color = "#de7d15";
-    }
-    else if (mag > 5) {
-        color = "#de4b15";
+    else if (mag <= 4) {
+        color = "#da7509";
     }
     else {
-        color = "#81fa5c";
+        color = "#de4b15";
     };
     return color;
-};
+};  
 
+// Create Tooltips
 function createFeatures(data) {
      
     let earthquakeData = L.geoJSON(data, {
@@ -113,38 +119,23 @@ function createMap(earthquakeData) {
         position: "bottomright"
     });
 
- 
     legend.onAdd = function() {
         let div = L.DomUtil.create("div", "info legend");
         let level = [0, 1, 2, 3, 4, 5]
-        let labels = [];
 
-        // Add min & max
-        let legendInfo = `<h5>Magnitude Level</h5>
-        <div class="labels"></div>`;
-
-        div.innerHTML = legendInfo;
-
-        level.forEach(function(level, index){
-            labels.push(`<li style="background-color: ${colorMag(level[index])}"></li> 
-            + ${level[index]} + ${level[index + 1]}`)
-        });
-
-        div.innerHTML += `<ul>${labels.join("")}</ul>`;
-
+        for (let i = 0, ii = level.length; i < ii; i++) {
+            div.innerHTML += 
+                '<i style="background:' + colorMag(level[i] + 1) + '"></i> ' + 
+                + level[i] + (level[i + 1] ? ' - ' + level[i + 1] + '<br>' : ' + ');
+        };
         return div;
     };
-        
-
+    
     // Adding legend to the map
     legend.addTo(myMap);
 
 };
-    
-// Create Features
-d3.json(baseUrl, function(data) {
-    createFeatures(data.features);
-});
+
   
 
 

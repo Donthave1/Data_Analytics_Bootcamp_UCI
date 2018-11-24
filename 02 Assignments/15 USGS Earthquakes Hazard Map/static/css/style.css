@@ -29,3 +29,19 @@ html {
 h1 {
   text-align: center;
 }
+
+.legend i {
+  padding: 6px 8px;
+  width: 14px;
+  height: 14px;
+  float: left;
+}
+
+.scale {
+  color: #38d807;
+  color: #c5e874;
+  color: #dcbb39;
+  color: #eba611;
+  color: #da7509;
+  color: #de4b15;
+}
