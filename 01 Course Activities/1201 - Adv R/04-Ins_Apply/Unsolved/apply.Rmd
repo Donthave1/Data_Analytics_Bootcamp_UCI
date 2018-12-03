@@ -1,0 +1,78 @@
+---
+title: "Apply"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+```{r}
+toFahrenheit <- function(temp) {
+  fahrenheit <- temp * 1.8 + 32
+  return(fahrenheit)
+}
+```
+```{r}
+celsius <- c(0, -2, 0, 5.2, 5.4)
+```
+```{r}
+fahrenheit <- numeric()
+for (i in 1:length(celsius)){
+  temp_fahrenheit = toFahrenheit((celsius[i]))
+  fahrenheit[i] <- temp_fahrenheit
+}
+fahrenheit
+```
+
+```{r}
+fahrenheit2 <- sapply(celsius, toFahrenheit)
+fahrenheit2
+```
+
+```{r}
+fahrenheit3 <- lapply(celsius, toFahrenheit)
+fahrenheit3
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

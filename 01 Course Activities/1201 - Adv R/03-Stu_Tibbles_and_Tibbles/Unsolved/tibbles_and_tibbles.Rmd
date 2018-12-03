@@ -1,0 +1,71 @@
+---
+title: "Tibbles and Tibbles"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE)
+```
+#### Dependency
+```{r, message=F, warning=F}
+library(tidyverse)
+```
+
+#### Create a Tibble by columns
+```{r}
+cart.rental.tb <- 
+  tibble(
+    Name = c(
+      "George",
+      "Martha",
+      "John",
+      "Abigail"
+    ),
+    Current.Age = c(
+      12,11,10,7
+    ),
+    Years.Left = (25 - Current.Age)
+  )
+cart.rental.tb
+```
+
+
+#### Create a Tibble by rows
+```{r}
+reliable.cars.tb <-
+  frame_data(
+    ~Brand, ~Least.Reliable.Model, ~Avg.Reliability.Score,
+    "Toyota", "Tacoma", "80",
+    "Lexus", "GX", "77",
+    "Kia", "Sportage", "71",
+    "Audi", "A7", "68",
+    "BMW", "i3", "62"
+  )
+reliable.cars.tb
+```
+
+
+#### Add a row to a Tibble
+```{r}
+cart.rental.tb <-
+  add_row(cart.rental.tb, Name="Thomas", Current.Age=15, Years.Left=(25 - Current.Age))
+cart.rental.tb
+```
+
+
+#### Add a column to a Tibble
+```{r}
+reliable.cars.tb <-
+  reliable.cars.tb %>% add_column(Rank=1:5)
+```
+```{r}
+reliable.cars.tb
+```
+
+
+#### Rearrange the columns of a Tibble
+```{r}
+reliable.cars.tb <- reliable.cars.tb[c(4, 1, 2, 3)]
+reliable.cars.tb
+```
+
