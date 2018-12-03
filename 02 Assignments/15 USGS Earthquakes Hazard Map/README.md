@@ -13,7 +13,7 @@ Visit the [USGS GeoJSON Feed page](https://earthquake.usgs.gov/earthquakes/feed/
 * JavaScript, Leaflet.js, D3.js, HTML, CSS, Boostrap
 
 ### Please click on the link below to check out data visualization of the past 7 days for Earthquakes Hazard Map:
-[USGS Earthquakes Hazard Map]()
+[USGS Earthquakes Hazard Map](https://donthave1.github.io/USGS-Earthquakes-Hazard-Map/)
 
 
 ![alt text](https://raw.githubusercontent.com/Donthave1/USGS-Earthquakes-Hazard-Map/master/static/images/5-Advanced.png "final")

@@ -1,0 +1,63 @@
+---
+title: "tibbles"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+data(diamonds, package="ggplot2")
+```
+
+```{r}
+slice(diamonds, 1:7)
+```
+
+```{r}
+slice(diamonds, c(1,7))
+```
+
+```{r}
+slice(diamonds, 3)
+```
+
+```{r}
+nrow(diamonds)
+```
+
+```{r}
+select(diamonds, carat, price)
+```
+
+```{r}
+filter(diamonds, cut=="Ideal" | cut=="Very Good")
+```
+
+```{r}
+filter(diamonds, cut=="Ideal" & price < 500)
+```
+
+```{r}
+total_volume <- mutate(diamonds, total.volume=(x * y * z))
+total_volume
+```
+
+```{r}
+summarize(diamonds, mean(price))
+```
+
+```{r}
+summarize(diamonds, average.price=(mean(price)))
+```
+
+```{r}
+cut <- group_by(diamonds, cut, color)
+summarize(cut, mean(price), sum(price))
+```
+
+```{r}
+count(diamonds, cut)
+```
+

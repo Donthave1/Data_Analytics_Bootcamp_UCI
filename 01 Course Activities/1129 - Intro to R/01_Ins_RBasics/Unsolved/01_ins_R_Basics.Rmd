@@ -1,0 +1,88 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(knitr)
+```
+```{r}
+a <- 3
+a
+```
+
+```{r}
+b <- "Hello World"
+b
+```
+
+```{r}
+c <- TRUE
+d <- T
+e <- FALSE
+f <- F
+print(c)
+print(d)
+print(e)
+print(f)
+F <- F
+print(F)
+```
+
+```{r}
+disney_characters <- c("mickey", "donald", "goofy")
+disney_characters
+```
+
+```{r}
+typeof(disney_characters)
+```
+
+```{r}
+presidents <- c("Washington", "Adams", "Jefferson")
+combined_vector <- c(disney_characters, presidents)
+combined_vector
+```
+
+```{r}
+number_vector <- c(1,2,3,4,"5")
+number_vector
+```
+
+```{r}
+
+```
+
+```{r}
+for (x in combined_vector) {
+  print(x)
+}
+```
+
+```{r}
+for (x in combined_vector) {
+  if (nchar(x) > 6){
+    next 
+  }
+  else {
+    print(x)
+  }
+}
+```
+
+```{r}
+random_list <- list(
+  "movies"=c("Star Wars", "Titanic", "Avatar"),
+  "coins"=c("dime", "nickel", "quarter", "penny"),
+  "presidents"=presidents
+)
+```
+
+```{r}
+random_list$movies
+```
+
