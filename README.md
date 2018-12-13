@@ -35,10 +35,11 @@ Please see below for the links to my assignment completion:
 
 [14. D3ta Journalism](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/14%20D3ta%20Journalism "Assignment 14")
 
+[15. USGS Earthquakes Hazard Map](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/15%20USGS%20Earthquakes%20Hazard%20Map "Assignment 15")
 
 ## Group Projects:
 
 [01. Boston Marathon Performance Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/03%20Team%20Projects/Boston%20Maraton "Group Project 1")
  
-
+[02. Wine Recommandation Application](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/03%20Projects/DrinkDrankDrunk "Group Project 2")
 
