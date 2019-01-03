@@ -1,6 +1,6 @@
 # Citi Bike Tableau Visual Analytics
 
-![alt text]( "sample-picture")
+![alt text](https://raw.githubusercontent.com/Donthave1/Data_Analytics_Bootcamp_UCI/master/02%20Assignments/16%20Tableau%20Homework/Images/citi-bike-station-bikes.jpg "sample-picture")
 
 ## Objective
 I am tasked to aggregate the data found in the [Citi Bike Trip History Logs](https://www.citibikenyc.com/system-data) to build a data visualization dashboard.  I chosen timespan for year of 2018 to present my finding. 
