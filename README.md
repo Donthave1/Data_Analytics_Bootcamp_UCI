@@ -37,7 +37,7 @@ Please see below for the links to my assignment completion:
 
 [15. USGS Earthquakes Hazard Map](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/15%20USGS%20Earthquakes%20Hazard%20Map "Assignment 15")
 
-[16. New York Citi Bike Data Visualization](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/16%20Tableau%20Homework "Assignment 16")
+[16. New York Citi Bike Data Visualization](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/02%20Assignments/16%20New%20York%20Citi%20Bike%20Data%20Visualization "Assignment 16")
 
 ## Group Projects:
 
