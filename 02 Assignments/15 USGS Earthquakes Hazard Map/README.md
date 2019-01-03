@@ -8,7 +8,7 @@ The USGS provides earthquake data in a number of different formats, updated ever
 
 Visit the [USGS GeoJSON Feed page](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) and pick the past 7-days data set to visualize. USGS website provided a [JSON representation](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson) of that data.
 
-
+Tools:
 
 * JavaScript, Leaflet.js, D3.js, HTML, CSS, Boostrap
 
