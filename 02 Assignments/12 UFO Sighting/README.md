@@ -1,4 +1,4 @@
-# Destination: Mars Live Feed 
+# UFO Sighting 
 
 ## Objective
 Create a basic HTML web page and read in UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to the web page and then display table per each search.

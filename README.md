@@ -45,3 +45,4 @@ Please see below for the links to my assignment completion:
  
 [02. Wine Recommandation Application](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/03%20Projects/DrinkDrankDrunk "Group Project 2")
 
+[03. Facial Expression Classification] ( "Group Project 3")
