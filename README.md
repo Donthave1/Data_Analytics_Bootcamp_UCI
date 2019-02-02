@@ -41,8 +41,8 @@ Please see below for the links to my assignment completion:
 
 ## Group Projects:
 
-[01. Boston Marathon Performance Analysis](https://github.com/Donthave1/UCI_Data_Bootcamp/tree/master/03%20Team%20Projects/Boston%20Maraton "Group Project 1")
+[01. Boston Marathon Performance Analysis](https://github.com/Tom2shoes/betterthangroup5 "Group Project 1")
  
-[02. Wine Recommandation Application](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/03%20Projects/DrinkDrankDrunk "Group Project 2")
+[02. Wine Recommandation Application](https://github.com/Donthave1/DrinkDrankDrunk "Group Project 2")
 
-[03. Facial Expression Classification](https://github.com/Donthave1/Data_Analytics_Bootcamp_UCI/tree/master/03%20Projects/GoodGameGang "Group Project 3")
+[03. Facial Expression Classification](https://github.com/Donthave1/goodgamegang "Group Project 3")
